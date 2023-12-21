@@ -3,3 +3,6 @@ daily_mkt_update
 
 # Ignore Python Version
 .python-version
+
+# Ignore DS Store
+.DS_Store
