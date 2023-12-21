@@ -1,0 +1,5 @@
+# Ignore Daily Market Update Environment Folder
+daily_mkt_update
+
+# Ignore Python Version
+.python-version
