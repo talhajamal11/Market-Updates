@@ -17,13 +17,29 @@ class MarketDataYFinance:
     They perform this task on only one security
     """
 
-    def __init__(self, tic: str, start: str, stop: str) -> None:
+    def __init__(self, 
+                tic: str,
+                delta: int = 252,
+                fixed: bool = True,
+                start: str = dt.datetime.today().strftime('%Y-%m-%d'),
+                stop: str = dt.datetime.today().strftime('%Y-%m-%d')) -> None:
         """
-        Initialize Class with Ticker and start and stop dates to pull data for
+        If start specified, pull data for ticker from start till stop
+        else pull data for delta number of days
         """
-        self.tic = tic
-        self.start = dt.datetime.strptime(start, '%Y/%m/%d')
-        self.stop = dt.datetime.strptime(stop, '%Y/%m/%d')
+        if fixed:
+            self.tic = tic
+            self.delta = delta
+            self.start = (dt.datetime.today() - dt.timedelta(days=delta)).strftime('%Y-%m-%d')
+            self.stop = dt.datetime.today().strftime('%Y-%m-%d')
+            return None
+
+        else:
+            self.tic = tic
+            self.start = dt.datetime.strptime(start, '%Y-%m-%d')
+            self.stop = dt.datetime.strptime(stop, '%Y-%m-%d')
+            
+        return None
 
     def price_df(self, price_col: str = 'Adj Close') -> pd.DataFrame:
         """This function returns a dataframe for the pricing and volume data for a single 

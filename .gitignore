@@ -6,3 +6,6 @@ daily_mkt_update
 
 # Ignore DS Store
 .DS_Store
+
+# Ignore PyCache
+src/__pycache__/*
