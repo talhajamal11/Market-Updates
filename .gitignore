@@ -9,3 +9,7 @@ daily_mkt_update
 
 # Ignore PyCache
 src/__pycache__/*
+
+# Ignore certain files
+data/yhallsym.txt
+src/market_data.py
