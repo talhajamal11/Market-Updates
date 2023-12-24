@@ -3,13 +3,13 @@ Script to generate images for top 10 daily, weekly, monthly and yearly performan
 
 Written by: Talha Jamal @ 24/12/2023
 """
-import time
-_start = time.time()
 import datetime as dt
 import os
 import pandas as pd
 import matplotlib.pyplot as plt
 import yfinance as yf
+import time
+_start = time.time()
 
 #Create directory to store today's plots
 _today = dt.datetime.today().strftime('%Y-%m-%d')
