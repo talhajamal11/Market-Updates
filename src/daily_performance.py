@@ -55,6 +55,7 @@ _FILENAME = '1D_performance.png'
 _full_path = os.path.join(directory, _FILENAME)
 plt.savefig(_full_path)
 #plt.show()
+plt.clf()
 
 # Plot of best performing stocks over 1 Week
 for ticker, ret in one_week_performance.items():
@@ -70,6 +71,7 @@ _FILENAME = '1W_performance.png'
 _full_path = os.path.join(directory, _FILENAME)
 plt.savefig(_full_path)
 #plt.show()
+plt.clf()
 
 # Plot of best performing stocks over 1 Month
 for ticker, ret in one_month_performance.items():
@@ -85,6 +87,7 @@ _FILENAME = '1M_performance.png'
 _full_path = os.path.join(directory, _FILENAME)
 plt.savefig(_full_path)
 #plt.show()
+plt.clf()
 
 # Plot of best performing stocks over 1 Year
 for ticker, ret in one_year_performance.items():
@@ -100,3 +103,4 @@ _FILENAME = '1Y_performance.png'
 _full_path = os.path.join(directory, _FILENAME)
 plt.savefig(_full_path)
 #plt.show()
+plt.clf()
