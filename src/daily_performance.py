@@ -3,6 +3,8 @@ Script to generate images for top 10 daily, weekly, monthly and yearly performan
 
 Written by: Talha Jamal @ 24/12/2023
 """
+import time
+_start = time.time()
 import datetime as dt
 import os
 import pandas as pd
@@ -104,3 +106,6 @@ _full_path = os.path.join(directory, _FILENAME)
 plt.savefig(_full_path)
 #plt.show()
 plt.clf()
+
+_stop = time.time()
+print(_stop - _start)
